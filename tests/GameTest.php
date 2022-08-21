@@ -10,20 +10,6 @@ use PHPUnit\Framework\TestCase;
 
 class GameTest extends TestCase{
     
-   /*  public function test_Rock_beats_Scissors()
-    {
-        //Given
-        $playerOne = new Game;
-        $playerTwo = new Game;
-
-        $playerOne -> _construct();
-        $playerTwo -> _construct();
-        //$this->assertEquals("Rock", $playerOne->probar(1,2));
-      
-       $result=$playerOne && $playerTwo-> probar(1,2);
-       $this->assertEquals("Rock Wins",$result);
-    } */
-
     /** @test */
     public function test_Rock_beats_Scissors()
     {
@@ -36,8 +22,19 @@ class GameTest extends TestCase{
         $playerTwo->chose("Scissors");
 
        $winner= $game->start($playerOne, $playerTwo);
-        $this->assertEquals("Rock Wins", $winner);
-    
+        $this->assertEquals("Player_1 Wins", $winner);
+    }
+    public function test_Rock_beats_Scissors_Player2()
+    {
+        // Given
+        $game = new Game;
+        $playerOne = new Player;
+        $playerTwo = new Player;
 
-}
+        $playerOne->chose("Scissors");
+        $playerTwo->chose("Rock");
+
+       $winner= $game->start($playerOne, $playerTwo);
+        $this->assertEquals("Player_2 Wins", $winner);
+    }
 }
