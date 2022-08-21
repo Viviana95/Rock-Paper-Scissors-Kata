@@ -2,11 +2,11 @@
 namespace App\Models;
 
 
-class Scissors extends Figure{
+class Paper extends Figure{
 
     public function __construct()
     {
-        $this->type="Scissors";
+        $this->type="Paper";
     }
 /** @test */
 

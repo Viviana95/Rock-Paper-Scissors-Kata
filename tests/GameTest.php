@@ -37,4 +37,70 @@ class GameTest extends TestCase{
        $winner= $game->start($playerOne, $playerTwo);
         $this->assertEquals("Player_2 Wins", $winner);
     }
+    public function test_Scissors_beats_Paper_Player1()
+    {
+        // Given
+        $game = new Game;
+        $playerOne = new Player;
+        $playerTwo = new Player;
+
+        $playerOne->chose("Scissors");
+        $playerTwo->chose("Paper");
+
+       $winner= $game->start($playerOne, $playerTwo);
+        $this->assertEquals("Player_1 Wins", $winner);
+    }
+    public function test_Scissors_beats_Paper_Player2()
+    {
+        // Given
+        $game = new Game;
+        $playerOne = new Player;
+        $playerTwo = new Player;
+
+        $playerOne->chose("Paper");
+        $playerTwo->chose("Scissors");
+
+       $winner= $game->start($playerOne, $playerTwo);
+        $this->assertEquals("Player_1 Wins", $winner);
+    }
+    public function test_Paper_beats_Rock_Player1()
+    {
+        // Given
+        $game = new Game;
+        $playerOne = new Player;
+        $playerTwo = new Player;
+
+        $playerOne->chose("Paper");
+        $playerTwo->chose("Rock");
+
+       $winner= $game->start($playerOne, $playerTwo);
+        $this->assertEquals("Player_1 Wins", $winner);
+    }
+    public function test_Paper_beats_Rock_Player2()
+    {
+        // Given
+        $game = new Game;
+        $playerOne = new Player;
+        $playerTwo = new Player;
+
+        $playerOne->chose("Rock");
+        $playerTwo->chose("Paper");
+
+       $winner= $game->start($playerOne, $playerTwo);
+        $this->assertEquals("Player_2 Wins", $winner);
+    }
+    public function test_same_moves_Rock()
+    {
+        // Given
+        $game = new Game;
+        $playerOne = new Player;
+        $playerTwo = new Player;
+
+        $playerOne->chose("Rock");
+        $playerTwo->chose("Rock");
+
+       $winner= $game->start($playerOne, $playerTwo);
+        $this->assertEquals("Draw Game", $winner);
+    }
+    
 }

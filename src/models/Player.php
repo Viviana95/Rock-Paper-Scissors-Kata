@@ -18,6 +18,9 @@ class Player{
        if( $figure == "Scissors"){
         $this->figure = new Scissors;
        }
+       if( $figure == "Paper"){
+         $this->figure = new Paper;
+        }
     }
 
 
