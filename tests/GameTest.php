@@ -61,7 +61,7 @@ class GameTest extends TestCase{
         $playerTwo->chose("Scissors");
 
        $winner= $game->start($playerOne, $playerTwo);
-        $this->assertEquals("Player_1 Wins", $winner);
+        $this->assertEquals("Player_2 Wins", $winner);
     }
     public function test_Paper_beats_Rock_Player1()
     {

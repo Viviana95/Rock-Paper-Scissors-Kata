@@ -18,7 +18,7 @@ if($playerOne->getFigure()->gettype() == "Scissors" && $playerTwo->getFigure()->
    return "Player_1 Wins";}
  
  if($playerOne->getFigure()->gettype() == "Paper" && $playerTwo->getFigure()->gettype() == "Scissors"){
-   return "Player_1 Wins";}
+   return "Player_2 Wins";}
  
  if($playerOne->getFigure()->gettype() == "Paper" && $playerTwo->getFigure()->gettype() == "Rock"){
    return "Player_1 Wins";}
