@@ -25,8 +25,11 @@ if($playerOne->getFigure()->gettype() == "Scissors" && $playerTwo->getFigure()->
  
  if($playerOne->getFigure()->gettype() == "Rock" && $playerTwo->getFigure()->gettype() == "Paper"){
    return "Player_2 Wins";}
- if($playerOne->getFigure()->gettype() == "Rock" && $playerTwo->getFigure()->gettype() == "Rock"){
-   return "Draw Game";}
+ if(($playerOne->getFigure()->gettype() == "Rock" && $playerTwo->getFigure()->gettype() == "Rock") OR 
+ ($playerOne->getFigure()->gettype() == "Scissors" && $playerTwo->getFigure()->gettype() == "Scissors") OR 
+ ($playerOne->getFigure()->gettype() == "Paper" && $playerTwo->getFigure()->gettype() == "Paper"))
+ 
+   return "Draw Game";
  }
    
 

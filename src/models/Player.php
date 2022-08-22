@@ -14,7 +14,6 @@ class Player{
        if( $figure == "Rock"){
         $this->figure = new Rock;
        }
-
        if( $figure == "Scissors"){
         $this->figure = new Scissors;
        }

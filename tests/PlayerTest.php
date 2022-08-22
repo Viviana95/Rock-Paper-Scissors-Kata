@@ -29,6 +29,7 @@ class PlayerTest extends TestCase
 
         $this->assertEquals($scissors, $player->getFigure());
     }
+    
 }
     
     

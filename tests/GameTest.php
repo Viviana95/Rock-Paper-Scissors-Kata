@@ -102,5 +102,31 @@ class GameTest extends TestCase{
        $winner= $game->start($playerOne, $playerTwo);
         $this->assertEquals("Draw Game", $winner);
     }
+    public function test_same_moves_Scissors()
+    {
+        // Given
+        $game = new Game;
+        $playerOne = new Player;
+        $playerTwo = new Player;
+
+        $playerOne->chose("Scissors");
+        $playerTwo->chose("Scissors");
+
+       $winner= $game->start($playerOne, $playerTwo);
+        $this->assertEquals("Draw Game", $winner);
+    }
+    public function test_same_moves_Paper()
+    {
+        // Given
+        $game = new Game;
+        $playerOne = new Player;
+        $playerTwo = new Player;
+
+        $playerOne->chose("Paper");
+        $playerTwo->chose("Paper");
+
+       $winner= $game->start($playerOne, $playerTwo);
+        $this->assertEquals("Draw Game", $winner);
+    }
     
 }
