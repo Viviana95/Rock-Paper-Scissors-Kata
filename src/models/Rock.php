@@ -1,16 +1,13 @@
 <?php
+
 namespace App\Models;
 
+use App\Models\Figure;
 
-class Rock extends Figure{
+class Rock extends Figure {
 
-  //  private $type = "Rock";
-
-    public function __construct()
-    {
-        $this->type="Rock";
+    public function __construct() {
+        $this->type = "Rock";
     }
-/** @test */
-
 
 }

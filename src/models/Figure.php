@@ -1,17 +1,13 @@
 <?php
+
 namespace App\Models;
 
-
-abstract class Figure{
+abstract class Figure {
 
     protected $type;
 
-   
-/** @test */
-public function getType()
-{
-    // Test
-    return $this->type;
-}
-
+    public function getType()
+    {
+        return $this->type;
+    }
 }

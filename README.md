@@ -1,4 +1,4 @@
-# KataRock-Paper-Scissors
+# Kata - Rock Paper Scissors
 
 ## Requiered
 
@@ -15,18 +15,6 @@
 or
 - composer test
 
-### Escribe un programa que imprima lo siguiente:
+### Steps and Use cases:
 
-Aplica las siguientes normas:
-
-Etapa 1: 
-Rock Beats Tijeras
-como jugador
-Quiero que el rock le gane a la tijera
-Para poder jugar con reglas con las que estoy familiarizado
-
-
-
-
-Etapa 2
-
+- https://agilekatas.co.uk/katas/RockPaperScissors-Kata

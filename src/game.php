@@ -1,36 +1,20 @@
 <?php
+
 namespace App;
 
-use PhpParser\Builder\Function_;
-
-class Game{
-
-  
-public function start($playerOne,$playerTwo)
-   {
-if($playerOne->getFigure()->gettype() == "Rock" && $playerTwo->getFigure()->gettype() == "Scissors"){
-  return "Player_1 Wins";}
-
-if($playerOne->getFigure()->gettype() == "Scissors" && $playerTwo->getFigure()->gettype() == "Rock"){
-   return "Player_2 Wins";}
-
- if($playerOne->getFigure()->gettype() == "Scissors" && $playerTwo->getFigure()->gettype() == "Paper"){
-   return "Player_1 Wins";}
- 
- if($playerOne->getFigure()->gettype() == "Paper" && $playerTwo->getFigure()->gettype() == "Scissors"){
-   return "Player_2 Wins";}
- 
- if($playerOne->getFigure()->gettype() == "Paper" && $playerTwo->getFigure()->gettype() == "Rock"){
-   return "Player_1 Wins";}
- 
- if($playerOne->getFigure()->gettype() == "Rock" && $playerTwo->getFigure()->gettype() == "Paper"){
-   return "Player_2 Wins";}
- if(($playerOne->getFigure()->gettype() == "Rock" && $playerTwo->getFigure()->gettype() == "Rock") OR 
- ($playerOne->getFigure()->gettype() == "Scissors" && $playerTwo->getFigure()->gettype() == "Scissors") OR 
- ($playerOne->getFigure()->gettype() == "Paper" && $playerTwo->getFigure()->gettype() == "Paper"))
- 
-   return "Draw Game";
- }
-   
+class Game {
+    
+    public function start($player1, $player2) : string
+    {
+        if ($player1->getFigure()->getType() == "Rock" && $player2->getFigure()->getType() == "Scissors") {
+            return "Player 1 wins";
+        }
+        if ($player1->getFigure()->getType() == "Scissors" && $player2->getFigure()->getType() == "Rock") {
+            return "Player 2 wins";
+        }
+        if($player1->getFigure()->getType()=="Scissors" && $player2->getFigure()->getType()=="Paper"){
+            return "Player 1 wins";
+        }
+    }
 
 }
